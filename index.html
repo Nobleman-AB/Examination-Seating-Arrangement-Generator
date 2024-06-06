@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seating Arrangement Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>IIEST, SHIBPUR</h1>
+        <h2>EXAMINATION SEATING ARRANGEMENT GENERATOR</h2>
+        
+        <label for="sem_details">Semester Details:</label> (Eg: B.TECH 4TH AND 8TH)
+        <input type="text" id="sem_details">
+
+        <label for="exam_details">Examination Details:</label> (Eg: MID-SEMESTER EXAMINATION)
+        <input type="text" id="exam_details">
+
+        <label for="month_year">Examination Month and Year:</label> (Eg: May 2024)
+        <input type="text" id="month_year">
+
+        <label for="exam_dates">Examination Dates:</label> (Eg: 11/05/2024 - 18/05/2024)
+        <input type="text" id="exam_dates">
+
+        <label for="exam_timings">Examination Timings:</label> (Eg: 10 AM - 1 PM)
+        <input type="text" id="exam_timings">
+
+        <label for="student_data_file">Student Data File:</label> (txt; Format: Roll_Number, Identifier)
+        <input type="file" id="student_data_file">
+
+        <label for="venue_data_file">Venue Data File:</label> (txt; Format: Venue_Name, Rows, Columns)
+        <input type="file" id="venue_data_file">
+
+        <button onclick="generateSeatingArrangement()">Generate Seating Arrangement</button>
+
+        <p id="output">The desired seating arrangement will be available for download in the browser upon successful creation!<br>The details of the examination would be appended to the top of each page. <br>The 2nd field of the student data file, must contain the identifier, which would not allow 2 students having the same identifier to be placed beside each other.</p>
+        <button onclick="exitApplication()" class="exit">EXIT</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
